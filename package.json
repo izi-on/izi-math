@@ -1,5 +1,5 @@
 {
-  "name": "izi-math-determinstic",
+  "name": "izi-math-deterministic",
   "version": "0.1.0",
   "description": "Fast cross-platform deterministic math operations powered by WebAssembly",
   "type": "module",
