@@ -1,5 +1,7 @@
 # izi-math
 
+[GitHub Repository](https://github.com/izi-on/izi-math)
+
 Cross-platform deterministic custom implementation of certain math operations:
 - `sqrt` — bisection method
 - `sin` — Taylor series with error bound
@@ -10,28 +12,10 @@ Cross-platform deterministic custom implementation of certain math operations:
 For some projects I need cross-platform determinism more than I need accuracy for these operations.
 Also felt like applying some basic knowledge I learned in university.
 
-## Prerequisites
-
-Install [Emscripten](https://emscripten.org/docs/getting_started/downloads.html):
+## Installation
 
 ```bash
-git clone https://github.com/emscripten-core/emsdk.git
-cd emsdk
-./emsdk install latest
-./emsdk activate latest
-source ./emsdk_env.sh
-```
-
-## Build
-
-```bash
-npm run build
-```
-
-## Test
-
-```bash
-npm test
+npm install izi-math
 ```
 
 ## Usage
@@ -70,10 +54,6 @@ cos(Math.PI);       // { ans: -1, error: 2.55e-254 }
 | `tolerance` | `1e-8` | Minimum allowed value is `1e-8` |
 | `taylor_iters` | `170` | Must be an integer in the range `[1, 170]` |
 
-## Adding new C functions
+## Contributing
 
-1. Add your function to `src/math.c` using `double` params and return type, marked with `EMSCRIPTEN_KEEPALIVE`
-2. Add `"_your_function_name"` to the `EXPORTED_FUNCTIONS` list in `build.sh`
-3. Add a `cwrap` call in `index.js` and export a wrapper
-4. Add the TypeScript signature to `index.d.ts`
-5. Run `npm run build`
+See [CONTRIBUTING.md](CONTRIBUTING.md) for build instructions, prerequisites, and how to add new functions.
