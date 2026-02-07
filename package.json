@@ -1,6 +1,6 @@
 {
   "name": "izi-math",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Fast cross-platform deterministic math operations powered by WebAssembly",
   "type": "module",
   "main": "index.js",
