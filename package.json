@@ -1,0 +1,31 @@
+{
+  "name": "izi-math",
+  "version": "0.1.0",
+  "description": "Fast math operations powered by WebAssembly",
+  "type": "module",
+  "main": "index.js",
+  "module": "index.js",
+  "types": "index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./index.js",
+      "types": "./index.d.ts",
+      "default": "./index.js"
+    }
+  },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "dist/"
+  ],
+  "scripts": {
+    "build": "bash build.sh",
+    "test": "node --test test.js"
+  },
+  "keywords": [
+    "math",
+    "wasm",
+    "webassembly"
+  ],
+  "license": "MIT"
+}
